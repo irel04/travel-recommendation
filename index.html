@@ -7,7 +7,12 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<!-- Layer gradient -->
+	<div class="gradient"></div>
 	<nav>
+		<div class="hamburger">
+			<img src="./assets/menu.svg" alt="" srcset="">
+		</div>
 		<a id="logo" href="/index.html" >
 			<img src="./assets/airplane.svg" alt="">
 			<p>TravelBloom</p>
@@ -19,13 +24,38 @@
 		</div>
 		<div class="search-container">
 			<div class="search-wrapper">
-				<input type="text" placeholder="Enter a destination or Keyword">
+				<input type="text" placeholder="Search">
 				<div class="search-bttns">
 					<button type="button">Search</button>
 					<button type="button">Clear</button>
 				</div>
+				<div class="search-bttns-mobile">
+					<button type="button">
+						<img src="./assets/search.svg" alt="" srcset="">
+					</button>
+					<button id="clear" type="button">
+						<img src="./assets/cancel-circle.svg" alt="" srcset="">
+					</button>
+				</div>
 			</div>
 		</div>
 	</nav>
+	<!-- Container for main content of the webpage -->
+	<div class="main-container">
+		<div class="side-bar">
+			<p class="line"></p>
+			<ul class="icon-nav">
+				<li><img src="./assets/instagram.svg" alt="" srcset=""></li>
+				<li><img src="./assets/facebook.svg" alt="" srcset=""></li>
+				<li><img src="./assets/twitter.svg" alt="" srcset=""></li>
+				<li><img src="./assets/youtube.svg" alt="" srcset=""></li>
+			</ul>
+		</div>
+		<div class="content">
+			<h1>Explore Dream Destination</h1>
+			<p>It encourages exploration of unfamiliar territories, embracing diverse culture and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder</p>
+			<button type="button">Book Now</button>
+		</div>
+	</div>
 </body>
 </html>
