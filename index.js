@@ -6,7 +6,7 @@ const clearButton = document.getElementById("deleteBttn")
 
 searchButton.addEventListener("click", async () => {
 	
-	const inputValue = searchInput.value
+	const inputValue = searchInput.value.toLowerCase()
 	// Always clear value
 	searchResultWrapper.innerHTML = ""
 
@@ -17,13 +17,27 @@ searchButton.addEventListener("click", async () => {
 			throw new Error(`An error occur: ${response.status}`)
 		}
 
+		const beachKey = ["beaches", "beach"]
+		const templesKey = ["temples", "temple"]
+		const countryKey = ["countries", "country"]
+		
+		let keyword;
+		
+		if(beachKey.includes(inputValue)){
+			keyword = "beaches"
+		} else if (templesKey.includes(inputValue)){
+			keyword = "temples"
+		} else if (countryKey.includes(inputValue)){
+			keyword = "countries"
+		}
+
 		const data = await response.json()
-		const searchResult = data[inputValue]
+		const searchResult = data[keyword]
 		
 		if(searchResult){
 			searchResultWrapper.classList.remove("no-display")
 
-			if(inputValue === "countries"){
+			if(countryKey.includes(inputValue)){
 				searchResult.map(item => {
 					
 					item.cities.map(city => {
@@ -60,7 +74,7 @@ searchButton.addEventListener("click", async () => {
 			}
 
 		} else {
-			throw new Error("No result found")
+			throw new Error("No result found.")
 		}
 
 
@@ -74,4 +88,5 @@ clearButton.addEventListener("click", () => {
 	searchResultWrapper.classList.add("no-display")
 	searchResultWrapper.innerHTML = ""
 })
+
 
