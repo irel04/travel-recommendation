@@ -7,6 +7,8 @@ const clearButton = document.getElementById("deleteBttn")
 searchButton.addEventListener("click", async () => {
 	
 	const inputValue = searchInput.value
+	// Always clear value
+	searchResultWrapper.innerHTML = ""
 
 	try {
 		const response = await fetch("./travel_recommendation_api.json")
