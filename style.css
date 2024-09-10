@@ -321,7 +321,7 @@ nav {
 
 
 .img-container {
-    width: 500px;
+    width: 100%
 }
 
 .img-container img {
@@ -361,14 +361,15 @@ nav {
 }
 
 .search-result__main--container {
-	grid-column: span 3;
 	margin-top: 2rem;
-	grid-column-start: 8;
+	grid-column-start: 5;
+	grid-column-end: span 5;
 }
 
 
 .search-result__wrapper {
 	height: 500px;
+	width: 100%;
 	overflow-y: scroll;
 	display: flex;
 	flex-direction: column;
@@ -376,6 +377,13 @@ nav {
 	background-color: var(--button-color);
 	padding: 1rem;
 	border-radius: 0.5rem;
+}
+
+.search-result__container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
 }
 
 .no-display {
