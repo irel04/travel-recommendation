@@ -53,3 +53,4 @@ clearButton.addEventListener("click", () => {
 	searchResultWrapper.classList.add("no-display")
 	searchResultWrapper.innerHTML = ""
 })
+
