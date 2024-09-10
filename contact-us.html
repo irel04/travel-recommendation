@@ -56,23 +56,24 @@
 				<h1>Contact Us</h1>
 				<p>Get in touch</p>
 			</div>
-			<form class="form-container">
+			<form id="messageForm" onsubmit="formSubmit(event)" class="form-container">
 				<div class="input-section">
 					<label for="name">Name</label>
-					<input type="text" id="name">
+					<input type="text" id="name" required>
 				</div>
 				<div class="input-section">
 					<label for="email">Email</label>
-					<input type="text" id="email">
+					<input type="email" required id="email">
 				</div>
 				<div class="input-section">
 					<label for="message">Message</label>
-					<textarea id="message"></textarea>
+					<textarea id="message" required></textarea>
 				</div>
 				<button type="submit">Submit</button>
 			</form>
 		</div>
 		
 	</div>
+	<script src="./contact-us.js" defer></script>
 </body>
 </html>
