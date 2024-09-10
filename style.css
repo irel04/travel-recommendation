@@ -159,7 +159,7 @@ nav {
 }
 
 .content {
-	grid-column: span 4;
+	grid-column: span 2;
 	grid-column-start: 3;
 	display: flex;
 	justify-content: center;
@@ -270,6 +270,140 @@ nav {
 	font-size: 0.8rem;
 	font-weight: 600;
 }
+
+.input-section {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.input-section input, .input-section textarea {
+	background: none;
+	outline: none;
+	border: solid 1px black;
+	padding: 0.3rem 0.5rem;
+}
+
+.input-section textarea {
+	height: 200px;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 50%;
+}
+
+.contact-us__container {
+	display: flex;
+	grid-column-start: 4;
+	grid-column: span 8;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.contact_label h1 {
+	font-size: 4rem;
+}
+
+
+.form-container button {
+	background: var(--button-color);
+	border: none;
+	color: white;
+	padding: 0.3rem 0;
+	border-radius: 0.3rem;
+
+}
+
+.search-result__container {
+	
+}
+
+.img-container {
+    width: 500px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+.place-description {
+	padding: 1rem;
+	background-color: white;
+	border-radius: 0.5rem;
+	color: black;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.place-name {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.place-description p {
+	font-size: 0.8rem;
+}
+
+.place-description button {
+	width: 20%;
+	font-size: 0.8rem;
+	background: var(--button-color);
+	color: white;
+	padding: 0.2rem;
+	border-radius: 0.3rem;
+	border: none;
+}
+
+.search-result__main--container {
+	grid-column: span 3;
+	margin-top: 2rem;
+	grid-column-start: 8;
+}
+
+
+.search-result__wrapper {
+	height: 500px;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	background-color: var(--button-color);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.no-display {
+	display: none;
+}
+
+/* WebKit-based browsers */
+.search-result__wrapper::-webkit-scrollbar {
+	width: 12px;
+  }
+  
+  .search-result__wrapper::-webkit-scrollbar-track {
+	background: #f1f1f1; /* Track color */
+	border-radius: 10px;
+  }
+  
+  .search-result__wrapper::-webkit-scrollbar-thumb {
+	background-color: black; /* Scrollbar thumb color */
+	border-radius: 10px;
+	border: 3px solid #f1f1f1; /* Space around the thumb */
+  }
+  
+  .search-result__wrapper::-webkit-scrollbar-thumb:hover {
+	background-color: #555; /* Scrollbar thumb hover color */
+  }
+
 
 
 
@@ -420,5 +554,26 @@ nav {
 	.members .description {
 		font-size: 0.6rem;
 	}
+
+	.contact-us__container {
+		margin-top: 2rem;
+		flex-direction: column;
+		grid-column: span 8;
+		width: 80%;
+	}
+
+
+	.contact_label h1 {
+		font-size: 1.8rem;
+	}
+
+	.contact_label p {
+		font-size: 0.7rem;
+	}
+
+	
+
+	
+
 
 }
