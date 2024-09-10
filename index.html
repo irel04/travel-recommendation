@@ -24,10 +24,10 @@
 		</div>
 		<div class="search-container">
 			<div class="search-wrapper">
-				<input type="text" placeholder="Search">
+				<input id="searchInput" type="text" placeholder="Search">
 				<div class="search-bttns">
-					<button type="button">Search</button>
-					<button type="button">Clear</button>
+					<button id="submitSearch" type="button">Search</button>
+					<button id="deleteBttn" type="button">Clear</button>
 				</div>
 				<div class="search-bttns-mobile">
 					<button type="button">
@@ -57,29 +57,11 @@
 			<button type="button">Book Now</button>
 		</div>
 		<div class="search-result__main--container">
-			<div class="search-result__wrapper">
-				<div class="search-result__container">
-					<div class="img-container">
-						<img src="./assets//places/sydney.webp" alt="" srcset="">
-					</div>
-					<div class="place-description">
-						<p class="place-name">Sydney, Australia</p>
-						<p>A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.	</p>
-						<button type="button">Visit</button>
-					</div>
-				</div>
-				<div class="search-result__container">
-					<div class="img-container">
-						<img src="./assets//places/sydney.webp" alt="" srcset="">
-					</div>
-					<div class="place-description">
-						<p class="place-name">Sydney, Australia</p>
-						<p>A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.	</p>
-						<button type="button">Visit</button>
-					</div>
-				</div>
+			<div class="search-result__wrapper no-display">
+				
 			</div>
 		</div>
 	</div>
+	<script src="./index.js"></script>
 </body>
 </html>
