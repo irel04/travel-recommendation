@@ -23,20 +23,41 @@ searchButton.addEventListener("click", async () => {
 		if(searchResult){
 			searchResultWrapper.classList.remove("no-display")
 
-			searchResult.map(item => {
-				const { name, imageUrl, description } = item
+			if(inputValue === "countries"){
+				searchResult.map(item => {
+					
+					item.cities.map(city => {
+						const { name, imageUrl, description } = city
 
-				searchResultWrapper.innerHTML += `<div class="search-result__container">
-					<div class="img-container">
-						<img src="./assets/places/sydney.webp" alt="" srcset="">
-					</div>
-					<div class="place-description">
-						<p class="place-name">${name}</p>
-						<p>${description}</p>
-						<button type="button">Visit</button>
-					</div>
-				</div>`
-			})
+						searchResultWrapper.innerHTML += `<div class="search-result__container">
+						<div class="img-container">
+							<img src="./assets/places/${imageUrl}" alt="" srcset="">
+						</div>
+						<div class="place-description">
+							<p class="place-name">${name}</p>
+							<p>${description}</p>
+							<button type="button">Visit</button>
+						</div>
+					</div>`
+					})
+					
+				})
+			} else {
+				searchResult.map(item => {
+					const { name, imageUrl, description } = item
+	
+					searchResultWrapper.innerHTML += `<div class="search-result__container">
+						<div class="img-container">
+							<img src="./assets/places/${imageUrl}" alt="" srcset="">
+						</div>
+						<div class="place-description">
+							<p class="place-name">${name}</p>
+							<p>${description}</p>
+							<button type="button">Visit</button>
+						</div>
+					</div>`
+				})
+			}
 
 		} else {
 			throw new Error("No result found")
