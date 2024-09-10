@@ -318,9 +318,7 @@ nav {
 
 }
 
-.search-result__container {
-	
-}
+
 
 .img-container {
     width: 500px;
@@ -443,6 +441,13 @@ nav {
 		font-size: medium;
 	}
 
+	.search-result__main--container {
+		display: none;
+	}
+
+	.our-team__container {
+		margin-top: 2rem;
+	}
 
 }
 
@@ -573,7 +578,9 @@ nav {
 
 	
 
-	
+	.search-result__main--container {
+		display: none;
+	}
 
 
 }
